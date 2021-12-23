@@ -1,0 +1,97 @@
+
+
+<MenuWidget>:
+    canvas:
+        Color:
+            rgba: 0, 0, 0, 0.8
+        Rectangle:
+            size: 900, 400
+    Label:
+        font_size: dp(30)
+        font_name: 'fonts/Sackers-Gothic-Std-Light.ttf'
+        text: root.parent.menu_title
+        #pos_hint: { "center_x": 0.5, "center_y": 0.6}
+        pos: "400dp", "175dp"
+
+    Button:
+        font_size: dp(20)
+        font_name: 'fonts/Eurostile.ttf'
+        text: root.parent.menu_button_title
+        # pos_hint: { "center_x": 0.5, "center_y": 0.4}
+        # size_hint: 0.2, 0.1
+        size: "200dp", "50dp"
+        pos: "350dp", "125dp"
+        on_press: root.parent.on_menu_button_pressed()      # parent weil nicht in menuwidget sondern in main diese funktion definiert werden soll
+        background_normal: ''
+        background_color: 1, 0.3, 0.4, 0.85
+
+    Button:
+        font_size: dp(20)
+        font_name: 'fonts/Eurostile.ttf'
+        text: "Story"
+        size: "100dp", "50dp"
+        pos: "795dp", "345dp"
+        on_press: root.parent.on_Story_button_pressed()
+        background_normal: ''
+        background_color: 0, 0.3, 0.8, 0.3
+
+    Label:
+        text: root.parent.my_story1
+        pos: "50dp", "100dp"
+        size: "800dp", "15"
+
+    Label:
+        text: root.parent.my_story2
+        pos: "50dp", "85dp"
+        size: "800dp", "15"
+
+    Label:
+        text: root.parent.my_story3
+        pos: "50dp", "70dp"
+        size: "800dp", "15"
+
+    Label:
+        text: root.parent.my_story4
+        pos: "50dp", "55dp"
+        size: "800dp", "15"
+
+    Label:
+        text: root.parent.my_story5
+        pos: "50dp", "40dp"
+        size: "800dp", "15"
+
+
+    Button:
+        font_size: dp(20)
+        font_name: 'fonts/Eurostile.ttf'
+        text: "Highscore"
+        size: "100dp", "50dp"
+        pos: "795dp", "290dp"
+        on_press: root.parent.on_highscore_button_pressed()
+        background_normal: ''
+        background_color: 0, 0.3, 0.8, 0.3
+
+    Label:
+        text: root.parent.highscore1
+        pos: "200dp", "350dp"
+        size: "500dp", "15"
+
+    Label:
+        text: root.parent.highscore2
+        pos: "200dp", "335dp"
+        size: "500dp", "15"
+
+    Label:
+        text: root.parent.highscore3
+        pos: "200dp", "320dp"
+        size: "500dp", "15"
+
+    Label:
+        text: "Hard Mode"
+        pos: 0, "275dp"
+        font_size: dp(15)
+        font_name: 'fonts/Eurostile.ttf'
+
+    Switch:
+        on_active: root.parent.on_switch_active(self)
+        pos: 0, "250dp"
